@@ -18,7 +18,8 @@ export const siteConfig = {
   links: {
     docs: "/docs",
     github: "https://github.com/MegaAntiCheat",
-    twitter: "https://twitter.com/megaanticheat",
+    twitter: null,
+    // twitter: "https://twitter.com/megaanticheat", // TODO: Set up Twitter
   },
 };
 
