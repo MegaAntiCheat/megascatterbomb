@@ -1,7 +1,6 @@
 * text eol=lf
 
 # Graphics
-*.svg text # SVG treated as an asset (binary) by default.
 *.ai binary
 *.bmp binary
 *.eps binary
@@ -24,6 +23,10 @@
 *.wbmp binary
 *.webp binary
 *.avif binary
+
+# SVG treated as an asset (binary) by default.
+*.svg text
+
 
 # Fonts
 *.ttf binary
