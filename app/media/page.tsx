@@ -4,8 +4,8 @@ import { H1 } from "@/components/ui/header";
 import { YouTubeEmbed } from "@/components/youtube-embed";
 
 const YOUTUBE_IDS = {
-  botCrisis1: "EPsWjdkyoPo",
   anOfferForTheCheaters: "ARN5PtTKbtg",
+  botCrisis1: "EPsWjdkyoPo",
   pissOffCheaters: "LVgk5t64cRs",
 };
 
@@ -17,11 +17,15 @@ const embeds = [
 
 export default async function Media() {
   return (
-    <>
+    <section className="grid content-center items-center gap-6">
       <H1>Media</H1>
-      {embeds.map((id) => (
-        <YouTubeEmbed key={id} videoId={id} />
-      ))}
-    </>
+      <div className="grid gap-6">
+        {embeds.map((id) => (
+          <div className="max-w-2xl" key={id}>
+            <YouTubeEmbed videoId={id} id={id} />
+          </div>
+        ))}
+      </div>
+    </section>
   );
 }

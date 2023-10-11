@@ -10,13 +10,19 @@ export async function YouTubeEmbed(props: YouTubeProps) {
   };
 
   const opts: YouTubeProps["opts"] = {
-    height: "390",
-    width: "640",
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
+      autoplay: 0,
     },
+    width: "100%",
   };
 
-  return <YouTube {...props} opts={opts} onReady={onPlayerReady} />;
+  return (
+    <YouTube
+      className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+      {...props}
+      opts={opts}
+      onReady={onPlayerReady}
+    />
+  );
 }
