@@ -19,7 +19,12 @@ export const Icons = {
     </svg>
   ),
   logo: () => (
-    <Image alt="MAC logo" height={24} src="/MAC_clean.png" width={24} />
+    <Image
+      alt="MAC logo depicting large weapon sights fixed on the cartoon outline of a kiwi bird's head"
+      height={24}
+      src="/MAC_clean.png"
+      width={24}
+    />
   ),
   moon: Moon,
   sun: SunMedium,
