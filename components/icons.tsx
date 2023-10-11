@@ -1,4 +1,4 @@
-import Image, { ImageProps } from "next/image";
+import Image from "next/image";
 import {
   LucideProps,
   Moon,
@@ -18,9 +18,8 @@ export const Icons = {
       ></path>
     </svg>
   ),
-  logo: (props: ImageProps) => (
+  logo: () => (
     <Image
-      {...props}
       alt="MAC logo depicting large weapon sights fixed on the cartoon outline of a kiwi bird's head"
       height={24}
       src="/MAC_clean.png"
