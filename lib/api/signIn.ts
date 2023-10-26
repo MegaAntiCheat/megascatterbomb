@@ -1,15 +1,17 @@
 import { ErrorType, post } from "./apiBase";
 
-interface Profile {
+export interface ProfileType {
   name: string;
   profilePicture: string;
 }
 
 interface AuthResponse {
-  data: Profile | ErrorType;
+  data: ProfileType | ErrorType;
 }
 
-export const getUserProfile = async (authCode: string) => {
+type SignIn = (arg0: string) => Promise<ProfileType>;
+
+export const signIn: SignIn = async (authCode) => {
   try {
     const response: AuthResponse = await post<AuthResponse>("/auth", {
       authCode,
@@ -19,7 +21,7 @@ export const getUserProfile = async (authCode: string) => {
       throw new Error("Failed to authenticate.");
     }
 
-    return response.data as Profile;
+    return response.data as ProfileType;
   } catch (error) {
     throw new Error("Failed to communicate with API");
   }
