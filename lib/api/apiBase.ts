@@ -4,7 +4,7 @@ export interface ErrorType {
   error: string;
 }
 
-export async function get(endpoint: string): Promise<T> {
+export async function get<T>(endpoint: string): Promise<T> {
   const response = await fetch(`${baseURL}${endpoint}`);
   return (await response.json()) as T;
 }
