@@ -5,7 +5,7 @@ export interface ProfileType {
   profilePicture: string;
 }
 
-interface AuthResponse {
+export interface AuthResponse {
   data: ProfileType | ErrorType;
 }
 
